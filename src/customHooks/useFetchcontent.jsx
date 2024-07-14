@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
+import loaderAtom from "../atoms";
+import { useSetRecoilState } from "recoil";
 
 export default function useFetchcontent() {
-
+    const setLoader = useSetRecoilState(loaderAtom)
     const [pokemons,setPokemons] = useState([]);
     useEffect(()=>{
         (async()=>{
@@ -21,6 +23,7 @@ export default function useFetchcontent() {
                 results[i] = {...results[i],...requiredData}
             } 
             setPokemons(results)
+            setLoader(false)
         })();
     },[])
     return pokemons;
