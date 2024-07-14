@@ -24,8 +24,7 @@ export default function App() {
   return (
     <>
         {loader && 
-            <div className = 'fixed z-20 inset-0 backdrop-blur-sm flex justify-center items-center text-[#3e3d3d] text-3xl poppins-medium'> Loading...</div>
-            }
+            <div className = 'fixed z-20 inset-0 backdrop-blur-sm flex justify-center items-center text-[#3e3d3d] text-3xl poppins-medium'> Loading...</div>}
         <div ref = {targetRef}>
             <div className = 'fixed top-12 w-screen flex justify-center z-10'>
                 <input className = 'border-[#141414] border-2 outline-none text-[#33C8FE] caret-[#33C8FE] px-2 py-1 rounded-sm bg-[#141414] poppins-medium' type="text" placeholder="Search Pokemon" onChange = {handleChange} />
