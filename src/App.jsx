@@ -9,7 +9,7 @@ import beam from './assets/beam.png'
 
 export default function App() {
     const pokemons = useFetchcontent() 
-    const loader = useRecoilValue(loaderAtom)
+    const loader = useRecoilValue(loaderAtom) //Recoil -State management library
     const [searchQuery,setSearchQuery] = useState('')
     const targetRef = useRef(null)
     const handleChange = (event)=>{
