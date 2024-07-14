@@ -4,7 +4,7 @@ export default function Template({pokemon,index}) {
   return (
     <div style = {{top:`${index*4}px`}} className = {`h-screen flex justify-center max-md:items-center items-end sticky lg:pb-12`}>
         <div className = 'w-[70%] h-[80%] max-md:h-[50%] max-md:w-[90%]' >
-            <div className = 'grid md:grid-cols-2 max-md:grid-rows-2 h-full bg-[#141414] rounded-lg border-neutral-100/60 border-t overflow-hidden'>
+            <div className = 'grid md:grid-cols-2 max-md:grid-rows-2 h-full bg-[#141414] rounded-lg border-[#33C8FE]/80 border-t overflow-hidden'>
                 <div className = 'flex items-center md:flex-col gap-4 justify-around md:justify-center'>
                     <motion.img initial = {{opacity:0.9}} whileHover = {{scale:1.05,y:'-5px',opacity:1}} className = 'w-24 md:w-28 lg:w-40'src={pokemon.imageURL} alt={pokemon.name} />
                     <span className = 'anton-regular text-[4.5vh] lg:text-[4.5vw] text-neutral-100 capitalize'>{pokemon.name}</span>
