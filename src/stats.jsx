@@ -13,11 +13,11 @@ export default function Stats({title,clusterCloudOf4,row}) {
   }
 
   const handleMouseLeave = ()=>{
-    animateText.start({y:"2.3vw",opacity:1,transition:{
+    animateText.start({y:"2.4vw",opacity:1,transition:{
       ease:'easeOut',duration:0.3
     }
     })
-    animateCluster.start({y:'2.3vw',opacity:0,transition:{
+    animateCluster.start({y:'2.4vw',opacity:0,transition:{
       y:{duration:0.3}
     }})
   }
@@ -29,13 +29,13 @@ export default function Stats({title,clusterCloudOf4,row}) {
       >
           <div className = 'flex justify-center relative'>
             <motion.div className = 'uppercase text-nowrap'
-              initial = {{y:"2.3vw"}}
+              initial = {{y:"2.4vw"}}
               animate = {animateText}
             >
                 {title}
             </motion.div>
             <motion.div className = 'absolute inset-0'
-              initial = {{y:'2.3vw',opacity:0}}
+              initial = {{y:'2.4vw',opacity:0}}
               animate = {animateCluster}
             >
                 <ClusterCloud row={row} clusterCloudOf4 = {clusterCloudOf4}/>
