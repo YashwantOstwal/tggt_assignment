@@ -8,7 +8,6 @@ export default function App() {
     const pokemons = useFetchcontent(); 
     const [searchQuery,setSearchQuery] = useState('');
     const targetRef = useRef(null);
-
     const handleChange = (event)=>{
         setSearchQuery(event.target.value.toLowerCase());
     }
@@ -21,7 +20,7 @@ export default function App() {
   return (
     <div ref = {targetRef}>
         <div className = 'fixed top-12 w-screen flex justify-center z-10'>
-            <input className = 'border-[#141414] border-2 outline-none caret-[#33C8FE] px-2 py-1 rounded-sm bg-[#141414] text-neutral-100 poppins-medium' type="text" placeholder="Search Pokemon" onChange = {handleChange} />
+            <input className = 'border-[#141414] border-2 outline-none text-[#33C8FE] caret-[#33C8FE] px-2 py-1 rounded-sm bg-[#141414] text-neutral-100 poppins-medium' type="text" placeholder="Search Pokemon" onChange = {handleChange} />
         </div>
         <div className = 'relative text-white'>
             {pokemons?.filter(pokemon=> {return pokemon.name.includes(searchQuery)}).map((pokemon,i)=>
@@ -37,6 +36,5 @@ export default function App() {
             </motion.div>
         </motion.div>
     </div>
-
   )
 }
