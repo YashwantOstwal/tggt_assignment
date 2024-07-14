@@ -24,10 +24,8 @@ export default function App() {
             <input className = 'border-[#141414] border-2 outline-none caret-[#C58FFF] px-2 py-1 rounded-sm bg-[#141414] text-neutral-100 poppins-medium' type="text" placeholder="Search Pokemon" onChange = {handleChange} />
         </div>
         <div className = 'relative text-white'>
-            {
-                pokemons?.filter(pokemon=> {return pokemon.name.includes(searchQuery)}).map((pokemon,i)=>
-                    <Template key = {i} pokemon = {pokemon} index = {i} />
-            )}
+            {pokemons?.filter(pokemon=> {return pokemon.name.includes(searchQuery)}).map((pokemon,i)=>
+                    <Template key = {i} pokemon = {pokemon} index = {i} />)}
         </div>
         <motion.div className = 'fixed inset-x-0 h-[0.15rem] z-10 top-6'
           animate = {{y:['0px','0.5px','-0.5px','0px']}}
