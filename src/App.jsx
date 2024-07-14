@@ -34,13 +34,14 @@ export default function App() {
                         <Template key = {i} pokemon = {pokemon} index = {i} />)}
             </div>
             <motion.div className = 'fixed inset-x-0 h-[0.15rem] z-10 top-6'
-            animate = {{y:['0px','0.5px','-0.5px','0px']}}
-            transition = {{repeat:Infinity}}
+                initial = {{width:'0'}}
+                style = {{width}}
+                animate = {{y:['0px','0.5px','-0.5px','0px']}}
+                transition = {{repeat:Infinity}}
             >
-                <motion.div className = 'relative h-full bg-[#E9FFFF] outline-2 outline outline-offset-0 outline-[#33C8FE] rounded-r-full'
-                style = {{width}}>
-                    <img className = 'absolute -top-[1.45rem] -right-1 max-w-32 min-w-32' src = {beam} alt="beam"/>
-                </motion.div>
+                    <div className = 'relative h-full bg-[#E9FFFF] outline-2 outline outline-offset-0 outline-[#33C8FE] rounded-r-full'>
+                        <img className = 'absolute -top-[1.45rem] -right-1 max-w-32 min-w-32' src = {beam} alt="beam"/>
+                    </div>
             </motion.div>
         </div>
     </>
