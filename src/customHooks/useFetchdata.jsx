@@ -3,7 +3,7 @@ import axios from 'axios'
 import loaderAtom from "../atoms";
 import { useSetRecoilState } from "recoil";
 
-export default function useFetchcontent() {
+export default function useFetchdata() {
     const setLoader = useSetRecoilState(loaderAtom)
     const [pokemons,setPokemons] = useState([]);
     useEffect(()=>{

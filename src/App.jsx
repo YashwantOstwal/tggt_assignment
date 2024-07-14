@@ -3,12 +3,12 @@ import { useRecoilValue } from "recoil"
 import { useRef, useState } from "react"
 import { useScroll, useTransform,motion } from 'framer-motion'
 import loaderAtom from "./atoms.jsx"
-import useFetchcontent from "./customHooks/useFetchcontent.jsx"
 import Template from "./Template.jsx"
 import beam from './assets/beam.png'
+import useFetchdata from "./customHooks/useFetchdata.jsx"
 
 export default function App() {
-    const pokemons = useFetchcontent() 
+    const pokemons = useFetchdata() 
     const loader = useRecoilValue(loaderAtom) //Recoil -State management library
     const [searchQuery,setSearchQuery] = useState('')
     const targetRef = useRef(null)
