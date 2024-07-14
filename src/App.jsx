@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div ref = {targetRef}>
         <span className = 'fixed z-20 top-12 left-2'>
-            <input className = ' border-[#C58FFF] border-2 outline-none caret-[#C58FFF] px-2 py-1 rounded-sm bg-[#141414] text-neutral-100 poppins-medium' type="text" placeholder="Search by keyword" onChange = {handleChange} />
+            <input className = ' border-[#C58FFF] border-2 outline-none caret-[#C58FFF] px-2 py-1 rounded-sm bg-[#141414] text-neutral-100 poppins-medium' type="text" placeholder="Search Pokemon" onChange = {handleChange} />
         </span>
         <div className = 'relative text-white'>
             {
